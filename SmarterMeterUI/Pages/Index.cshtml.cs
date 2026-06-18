@@ -41,7 +41,7 @@ public class IndexModel(MeterService meterService, IConfiguration config) : Page
         UnitRatePence = config.GetValue<decimal>("SmarterMeter:Tariff:UnitRatePence");
         StandingChargePence = config.GetValue<decimal>("SmarterMeter:Tariff:StandingChargePence");
 
-        Readings = await meterService.GetReadingsAsync(500);
+        Readings = await meterService.GetReadingsAsync(5000);
         Readings = [.. Readings.OrderBy(r => r.CapturedAt)];
 
         LatestReading = Readings.LastOrDefault();
