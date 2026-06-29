@@ -20,5 +20,4 @@ app.UseRouting();
 app.UseSession();
 app.MapStaticAssets();
 app.MapRazorPages().WithStaticAssets();
-
 app.Run();
