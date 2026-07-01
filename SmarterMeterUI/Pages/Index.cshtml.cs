@@ -8,7 +8,8 @@ namespace SmarterMeterUI.Pages;
 /// <summary>
 /// Index page model — fetches meter readings and calculates costs.
 /// </summary>
-public class IndexModel(MeterService meterService, IConfiguration config) : PageModel
+/// <param name="meterService">The meter service used to fetch data.</param>
+public class IndexModel(MeterService meterService) : PageModel
 {
     /// <summary>
     /// All readings fetched from the API.
